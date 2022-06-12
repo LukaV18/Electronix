@@ -12,6 +12,7 @@
 </head>
 
 <body>
+
     <!-- =================================================== -->
     <!-- Encabezado -->
     <!-- =================================================== -->
@@ -21,7 +22,7 @@
     <!-- =================================================== -->
     <!-- NavBar-->
     <!-- =================================================== -->
-    <nav class="navbar navbar-dark bg-dark navbar-expand-lg bg-light">
+    <nav class="navbar navbar-dark bg-dark navbar-expand-lg bg-light sticky-sm-top">
         <div class="container-fluid">
             <a href=""><img src="./assets/img/Logo.png" alt="Logo" width="25px"></a>
             <a class="navbar-brand px-1" href="#">Electronix</a>
@@ -37,24 +38,23 @@
                     </li>
                     <li class="nav-item">
                         </i><a class="nav-link" href="#">
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
-                                        class="bi bi-person-circle mx-2" viewBox="0 0 16 16">
-                                        <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0z"></path>
-                                        <path fill-rule="evenodd"
-                                            d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8zm8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1z">
-                                        </path>
-                                    </svg><span class="cuenta">Cuenta</span></a></li>
-                            <li>
-                                <hr class="dropdown-divider">
-                            </li>
-                            <li><a  class="nav-link" href="#"><svg xmlns="http://www.w3.org/2000/svg" width="16"
-                                        height="16" fill="currentColor" class="bi bi-cart-fill mx-2"
-                                        viewBox="0 0 16 16">
-                                        <path
-                                            d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .491.592l-1.5 8A.5.5 0 0 1 13 12H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2zm7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2z" />
-                                    </svg>Carrito</a></li>
-                        </ul>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                class="bi bi-person-circle mx-2" viewBox="0 0 16 16">
+                                <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0z"></path>
+                                <path fill-rule="evenodd"
+                                    d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8zm8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1z">
+                                </path>
+                            </svg><span class="cuenta">Cuenta</span></a></li>
+                    <li>
+                        <hr class="dropdown-divider">
                     </li>
+                    <li><a class="nav-link" href="#"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                fill="currentColor" class="bi bi-cart-fill mx-2" viewBox="0 0 16 16">
+                                <path
+                                    d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .491.592l-1.5 8A.5.5 0 0 1 13 12H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2zm7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2z" />
+                            </svg>Carrito</a></li>
+                </ul>
+                </li>
                 </ul>
                 <form class="d-flex" role="search">
                     <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
@@ -63,94 +63,167 @@
             </div>
         </div>
     </nav>
+
     <!-- =================================================== -->
     <!-- Main-->
     <!-- =================================================== -->
+    <div id="carouselExampleCaptions" class="carousel slide shadow" data-bs-ride="carousel">
+        <div class="carousel-indicators">
+            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active"
+                aria-current="true" aria-label="Slide 1"></button>
+            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1"
+                aria-label="Slide 2"></button>
+            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2"
+                aria-label="Slide 3"></button>
+        </div>
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <img src="/assets/img/D_NQ_676785-MLA50070925869_052022-OO.webp" class="d-block w-100" alt="...">
+
+            </div>
+            <div class="carousel-item">
+                <img src="/assets/img/D_NQ_816477-MLA49983670895_052022-OO.webp" class="d-block w-100" alt="...">
+
+            </div>
+            <div class="carousel-item">
+                <img src="/assets/img/D_NQ_965337-MLA49983492127_052022-OO.webp" class="d-block w-100" alt="...">
+            </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions"
+            data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions"
+            data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+        </button>
+    </div>
     <main>
         <div class="container mt-5 mb-5">
             <div class="d-flex justify-content-center row">
                 <div class="col-md-10">
-                    <div class="row p-2 bg-white border rounded">
-                        <div class="col-md-3 mt-1"><img class="img-fluid img-responsive rounded product-image" src="/assets/img/lenovo1.webp"></div>
+                    <div class="row p-2 bg-white border rounded productoSombra">
+                        <div class="col-md-3 mt-1"><img class="img-fluid img-responsive rounded product-image"
+                                src="/assets/img/lenovo1.webp"></div>
                         <div class="col-md-6 mt-1">
-                            <h5>Quant olap shirts</h5>
+                            <h5>Notebook Lenovo IdeaPad 15ITL6</h5>
                             <div class="d-flex flex-row">
-                                <div class="ratings me-2"><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i></div><span>310</span>
+                                <div class="ratings me-2"><i class="fa fa-star"></i><i class="fa fa-star"></i><i
+                                        class="fa fa-star"></i><i class="fa-solid fa-star-half-stroke"></i></i></div>
+                                <span>310</span>
                             </div>
-                            <div class="mt-1 mb-1 spec-1"><span>100% cotton</span><span class="dot"></span><span>Light weight</span><span class="dot"></span><span>Best finish<br></span></div>
-                            <div class="mt-1 mb-1 spec-1"><span>Unique design</span><span class="dot"></span><span>For men</span><span class="dot"></span><span>Casual<br></span></div>
-                            <p class="text-justify text-truncate para mb-0">There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable.<br><br></p>
+                            <div class="mt-1 mb-1 spec-1"><span>Es antirreflejo</span><span class="dot"></span><span>Es
+                                    táctil</span><span class="dot"></span><span>Pad numérico<br></span></div>
+                            <div class="mt-1 mb-1 spec-1"><span class="dot"></span><span>Wifi y bluetooth</span>
+                            </div>
+                            <p class="text-justify  textoDesc">La notebook Lenovo IdeaPad 3 fue pensada para hacer tu
+                                vida más sencilla. Su diseño elegante e innovador y su comodidad para transportarla, la
+                                convertirá en tu PC favorita.<br><br>
+                            </p>
                         </div>
                         <div class="align-items-center align-content-center col-md-3 border-left mt-1">
                             <div class="d-flex flex-row align-items-center">
-                                <h4 class="me-1">$13.99</h4><span class="strike-text">$20.99</span>
+                                <h4 class="me-1">$130.000</h4><span class="strike-text">$199.000</span>
                             </div>
                             <h6 class="text-success">Envío gratis</h6>
-                            <div class="d-flex flex-column mt-4"><button class="btn btn-danger btn-sm" type="button">Details</button><button class="btn btn-outline-primary btn-sm mt-2" type="button">Add to wishlist</button></div>
+                            <div class="d-flex flex-column mt-4"><button class="btn btn-danger btn-sm"
+                                    type="button">Detalles</button><button class="btn btn-outline-primary btn-sm mt-2"
+                                    type="button">Agregar al carrito</button></div>
                         </div>
                     </div>
-                    <div class="row p-2 bg-white border rounded mt-2">
-                        <div class="col-md-3 mt-1"><img class="img-fluid img-responsive rounded product-image" src="/assets/img/lenovo1.webp"></div>
+                    <div class="row p-2 bg-white border rounded mt-2 productoSombra">
+                        <div class="col-md-3 mt-1"><img class="img-fluid img-responsive rounded product-image"
+                                src="/assets/img/lenovo1.webp"></div>
                         <div class="col-md-6 mt-1">
                             <h5>Quant trident shirts</h5>
                             <div class="d-flex flex-row">
-                                <div class="ratings me-2"><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i></div><span>310</span>
+                                <div class="ratings me-2"><i class="fa fa-star"></i><i class="fa fa-star"></i><i
+                                        class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i>
+                                </div><span>197</span>
                             </div>
-                            <div class="mt-1 mb-1 spec-1"><span>100% cotton</span><span class="dot"></span><span>Light weight</span><span class="dot"></span><span>Best finish<br></span></div>
-                            <div class="mt-1 mb-1 spec-1"><span>Unique design</span><span class="dot"></span><span>For men</span><span class="dot"></span><span>Casual<br></span></div>
-                            <p class="text-justify text-truncate para mb-0">There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable.<br><br></p>
+                            <div class="mt-1 mb-1 spec-1"><span>100% cotton</span><span class="dot"></span><span>Light
+                                    weight</span><span class="dot"></span><span>Best finish<br></span></div>
+                            <div class="mt-1 mb-1 spec-1"><span>Unique design</span><span class="dot"></span><span>For
+                                    men</span><span class="dot"></span><span>Casual<br></span></div>
+                            <p class="text-justify text-truncate">There are many variations of passages of
+                                Lorem Ipsum available, but the majority have suffered alteration in some form, by
+                                injected humour, or randomised words which don't look even slightly believable.<br><br>
+                            </p>
                         </div>
                         <div class="align-items-center align-content-center col-md-3 border-left mt-1">
                             <div class="d-flex flex-row align-items-center">
-                                <h4 class="me-1">$14.99</h4><span class="strike-text">$20.99</span>
+                                <h4 class="me-1">$240.000</h4><span class="strike-text">$300.000</span>
                             </div>
                             <h6 class="text-success">Envío gratis</h6>
-                            <div class="d-flex flex-column mt-4"><button class="btn btn-danger btn-sm" type="button">Details</button><button class="btn btn-outline-primary btn-sm mt-2" type="button">Add to wishlist</button></div>
+                            <div class="d-flex flex-column mt-4"><button class="btn btn-danger btn-sm"
+                                    type="button">Detalles</button><button class="btn btn-outline-primary btn-sm mt-2"
+                                    type="button">Agregar al carrito</button></div>
                         </div>
                     </div>
-                    <div class="row p-2 bg-white border rounded mt-2">
-                        <div class="col-md-3 mt-1"><img class="img-fluid img-responsive rounded product-image" src="/assets/img/lenovo1.webp"></div>
+                    <div class="row p-2 bg-white border rounded mt-2 productoSombra">
+                        <div class="col-md-3 mt-1"><img class="img-fluid img-responsive rounded product-image"
+                                src="/assets/img/lenovo1.webp"></div>
                         <div class="col-md-6 mt-1">
                             <h5>Quant ruybi shirts</h5>
                             <div class="d-flex flex-row">
-                                <div class="ratings me-2"><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i></div><span>123</span>
+                                <div class="ratings me-2"><i class="fa fa-star"></i><i class="fa fa-star"></i><i
+                                        class="fa fa-star"></i><i class="fa fa-star"></i><i
+                                        class="fa-solid fa-star-half-stroke"></i></div><span>123</span>
                             </div>
-                            <div class="mt-1 mb-1 spec-1"><span>100% cotton</span><span class="dot"></span><span>Light weight</span><span class="dot"></span><span>Best finish<br></span></div>
-                            <div class="mt-1 mb-1 spec-1"><span>Unique design</span><span class="dot"></span><span>For men</span><span class="dot"></span><span>Casual<br></span></div>
-                            <p class="text-justify text-truncate para mb-0">There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable.<br><br></p>
+                            <div class="mt-1 mb-1 spec-1"><span>100% cotton</span><span class="dot"></span><span>Light
+                                    weight</span><span class="dot"></span><span>Best finish<br></span></div>
+                            <div class="mt-1 mb-1 spec-1"><span>Unique design</span><span class="dot"></span><span>For
+                                    men</span><span class="dot"></span><span>Casual<br></span></div>
+                            <p class="text-justify text-truncate para mb-0">There are many variations of passages of
+                                Lorem Ipsum available, but the majority have suffered alteration in some form, by
+                                injected humour, or randomised words which don't look even slightly believable.<br><br>
+                            </p>
                         </div>
                         <div class="align-items-center align-content-center col-md-3 border-left mt-1">
                             <div class="d-flex flex-row align-items-center">
-                                <h4 class="me-1">$13.99</h4><span class="strike-text">$20.99</span>
+                                <h4 class="me-1">$160.000</h4><span class="strike-text">$230.000</span>
                             </div>
                             <h6 class="text-success">Envío gratis</h6>
-                            <div class="d-flex flex-column mt-4"><button class="btn btn-danger btn-sm" type="button">Details</button><button class="btn btn-outline-primary btn-sm mt-2" type="button">Add to wishlist</button></div>
+                            <div class="d-flex flex-column mt-4"><button class="btn btn-danger btn-sm"
+                                    type="button">Detalles</button><button class="btn btn-outline-primary btn-sm mt-2"
+                                    type="button">Agregar al carrito</button></div>
                         </div>
                     </div>
-                    <div class="row p-2 bg-white border rounded mt-2">
-                        <div class="col-md-3 mt-1"><img class="img-fluid img-responsive rounded product-image" src="/assets/img/lenovo1.webp"></div>
+                    <div class="row p-2 bg-white border rounded mt-2 productoSombra">
+                        <div class="col-md-3 mt-1"><img class="img-fluid img-responsive rounded product-image"
+                                src="/assets/img/lenovo1.webp"></div>
                         <div class="col-md-6 mt-1">
                             <h5>Quant tinor shirts</h5>
                             <div class="d-flex flex-row">
-                                <div class="ratings me-2"><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i></div><span>110</span>
+                                <div class="ratings me-2"><i class="fa fa-star"></i><i class="fa fa-star"></i><i
+                                        class="fa fa-star"></i><i class="fa fa-star"></i></div><span>110</span>
                             </div>
-                            <div class="mt-1 mb-1 spec-1"><span>100% cotton</span><span class="dot"></span><span>Light weight</span><span class="dot"></span><span>Best finish<br></span></div>
-                            <div class="mt-1 mb-1 spec-1"><span>Unique design</span><span class="dot"></span><span>For men</span><span class="dot"></span><span>Casual<br></span></div>
-                            <p class="text-justify text-truncate para mb-0">There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable.<br><br></p>
+                            <div class="mt-1 mb-1 spec-1"><span>100% cotton</span><span class="dot"></span><span>Light
+                                    weight</span><span class="dot"></span><span>Best finish<br></span></div>
+                            <div class="mt-1 mb-1 spec-1"><span>Unique design</span><span class="dot"></span><span>For
+                                    men</span><span class="dot"></span><span>Casual<br></span></div>
+                            <p class="text-justify text-truncate para mb-0">There are many variations of passages of
+                                Lorem Ipsum available, but the majority have suffered alteration in some form, by
+                                injected humour, or randomised words which don't look even slightly believable.<br><br>
+                            </p>
                         </div>
                         <div class="align-items-center align-content-center col-md-3 border-left mt-1">
                             <div class="d-flex flex-row align-items-center">
-                                <h4 class="me-1">$15.99</h4><span class="strike-text">$21.99</span>
+                                <h4 class="me-1">$160.000</h4><span class="strike-text">$190.000</span>
                             </div>
                             <h6 class="text-success">Envío gratis</h6>
-                            <div class="d-flex flex-column mt-4"><button class="btn btn-danger btn-sm" type="button">Details</button><button class="btn btn-outline-primary btn-sm mt-2" type="button">Add to wishlist</button></div>
+                            <div class="d-flex flex-column mt-4"><button class="btn btn-danger btn-sm"
+                                    type="button">Detalles</button><button class="btn btn-outline-primary btn-sm mt-2"
+                                    type="button">Agregar al carrito</button></div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
     </main>
-
+   
 
 
 
