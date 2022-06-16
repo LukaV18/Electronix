@@ -38,7 +38,8 @@
 }
 
 .product-image {
-    width: 100%
+    width: 100%;
+    min-height: 177px;
 }
 
 .btn {
@@ -106,4 +107,5 @@ h5 {
     .strike-text {
         margin-bottom: 9px;
     }
+
 }
