@@ -1,22 +1,19 @@
 let introduceTuEdad = prompt("Por favor Ingrese su edad, debe ser mayor a 18 años para poder ingresar");
 
-while ((introduceTuEdad) != "ESC") {
+while (isNaN(introduceTuEdad) <= 17) {
 
     if (isNaN(introduceTuEdad)) {
-        alert("Introduce solo números")
+        alert("Introduce solo números");
+        introduceTuEdad = prompt("Por favor Ingrese su edad, debe ser mayor a 18 años para poder ingresar. Introduzca -ESC- para salir del ciclo");
 
-    }
+    } else if ((introduceTuEdad) < 18) {
 
-
-    if ((introduceTuEdad) < 18) {
-
-        alert("Tu edad es " + introduceTuEdad + " años,no deberías entrar a esta página");
-    }
-
-    else {
+        alert("Tienes " + introduceTuEdad + " años,no tienes permitido ingresar a esta página")
+        introduceTuEdad = prompt("Por favor Ingrese su edad, debe ser mayor a 18 años para poder ingresar. Introduzca -ESC- para salir del ciclo");
+    } else {
+        alert("Tienes " + introduceTuEdad + " años, puedes entrar a esta página");
         break
-    }
-    introduceTuEdad = prompt("Por favor Ingrese su edad, debe ser mayor a 18 años para poder ingresar");
-}
 
-alert("Tu edad es " + introduceTuEdad + " años, puedes entrar a esta página")
+    }
+
+}
