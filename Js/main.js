@@ -50,7 +50,9 @@ if (compra == null) {
 
 }
 
-if (compra == "si") {
+
+
+if (compra == "si".toLocaleLowerCase()) {
 
     let eleccionProductos = "";
 
@@ -83,7 +85,7 @@ if (compra == "si") {
         }
 
 
-        agregarAlCarrito(parseInt(eleccionProductos))
+        agregarProductosAlCarrito(parseInt(eleccionProductos))
         console.log(sumarTotal())
     }
     } else {
@@ -91,33 +93,43 @@ if (compra == "si") {
     }
 
 
-    function agregarAlCarrito(id) {
+    function agregarProductosAlCarrito(id) {
+
+        // logica del descuento
     
-        let producto = productos.find(producto => producto.id === id)
-
-        let productoEnCarrito = CARRITO.find(producto => producto.id === id)
-
+        let producto = productos.find(producto => producto.id === id);
+    
+        let productoEnCarrito = CARRITO.find(producto => producto.id === id);
+    
+        // Si esta en el carrito impacta en la cantidad
         if (productoEnCarrito) {
-
-            productoEnCarrito.cantidad++;
-            console.log(CARRITO)
-        } else {
-            producto.cantidad = 1;
-            CARRITO.push(producto)
-            console.log(CARRITO)
-        }
-    }
-
-function sumarTotal() {
-    let total = 0;
-
-    CARRITO.forEach(producto => {
-
-        total = total + producto.cantidad * producto.precio
-    })
     
-    return total;
-}
+            productoEnCarrito.cantidad++;
+    
+            // podrian hacer una funcion que solo haga console.log
+            console.log(CARRITO);
+        } else {
+    
+            // Si no esta en el carrito pushealo por primera vez
+            producto.cantidad = 1;
+            CARRITO.push(producto);
+            console.log(CARRITO);
+        }
+    
+    }
+    
+    function sumarTotal() {
+    
+        let total = 0;
+    
+        CARRITO.forEach(producto => {
+    
+            total += producto.cantidad * producto.precio;
+        })
+    
+        return total;
+    }
+    
 
 
 
