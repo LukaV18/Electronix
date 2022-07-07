@@ -147,8 +147,28 @@ if (compra == "si".toLocaleLowerCase()) {
     
 
 
+//uso del evento Submit, cuando el usuario puse el botón de enviar se mostraran los datos en la consola.
 
+const formulario = document.querySelector("#formulario");
+const input1 = document.getElementById("buscador")
+formulario.addEventListener("submit", validarFormulario);
 
+function validarFormulario(event) {
+    event.preventDefault();
+
+    let form = event.target;
+    let nombre = form.children[0].value;
+    let edad = form.children[2].value;
+
+    console.log(nombre)
+    console.log(edad)
+}
+
+//uso del evento input para el buscador.
+
+input1.addEventListener("input", () => {
+    console.log(input1.value)
+})
 //!Swiper js code //
 
 const swiper = new Swiper('.swiper', {
