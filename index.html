@@ -44,6 +44,7 @@
                     </li>
                     <li class="nav-item">
                         </i><a class="nav-link" href="#">
+
                             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
                                 class="bi bi-person-circle mx-2" viewBox="0 0 16 16">
                                 <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0z"></path>
@@ -54,6 +55,7 @@
                     <li>
                         <hr class="dropdown-divider">
                     </li>
+                    <div id="cartAmount" class="cartAmount">0</div>
                     <li><a class="nav-link" href="#"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
                                 fill="currentColor" class="bi bi-cart-fill mx-2" viewBox="0 0 16 16">
                                 <path
@@ -63,7 +65,8 @@
                 </li>
                 </ul>
                 <form class="d-flex" role="search">
-                    <input id="buscador"class="form-control me-2" type="search" placeholder="Buscar productos" aria-label="Search">
+                    <input id="buscador" class="form-control me-2" type="search" placeholder="Buscar productos"
+                        aria-label="Search">
                     <button class="btn btn-outline-info" type="submit">Buscar</button>
                 </form>
             </div>
@@ -113,10 +116,12 @@
         <!-- Recomendaciones -->
         <div class="container mt-5 mb-5">
             <h1 class="ofertasTexto">
-                <p id="tituloNombre" ></p>
-                <a class="ofertasEffect" href="#">Descubrí nuestras ofertas</a> </h1>
+                <p id="tituloNombre"></p>
+                <a class="ofertasEffect" href="#">Descubrí nuestras ofertas</a>
+                <ul id="lista"></ul>
+            </h1>
             <div class="d-flex justify-content-center row">
-                <div class="col-md-10">
+                <div class="col-md-10" id="shopOfertas">
                     <div class="row p-2 bg-white border rounded productoSombra">
                         <div class="col-md-3 mt-1"><img class="img-fluid img-responsive rounded product-image"
                                 src="./assets/img/Notebook2.jpg"></div>
@@ -127,14 +132,23 @@
                                         class="fa fa-star"></i><i class="fa-solid fa-star-half-stroke"></i></i></div>
                                 <span>310</span>
                             </div>
-                            <div class="mt-1 mb-1 spec-1"><span>Es antirreflejo</span><span class="dot"></span><span>Es
-                                    táctil</span><span class="dot"></span><span>Pad numérico<br></span></div>
-                            <div class="mt-1 mb-1 spec-1"><span class="dot"></span><span>Wifi y bluetooth</span>
+                            <div class="descripcion">
+                                <div class="mt-1 mb-1 spec-1"><span>Es antirreflejo</span><span
+                                        class="dot"></span><span>Es
+                                        táctil</span><span class="dot"></span><span>Pad numérico<br></span></div>
+                                <div class="mt-1 mb-1 spec-1"><span class="dot"></span><span>Wifi y bluetooth</span>
+                                </div>
+
                             </div>
-                            <p class="text-justify  textoDesc">La notebook Lenovo IdeaPad 3 fue pensada para hacer tu
-                                vida más sencilla. Su diseño elegante e innovador y su comodidad para transportarla, la
-                                convertirá en tu PC favorita.<br><br>
-                            </p>
+                            <div class="productoTexto">
+                                <p class="text-justify  textoDesc">La notebook Lenovo IdeaPad 3 fue pensada para hacer
+                                    tu
+                                    vida más sencilla. Su diseño elegante e innovador y su comodidad para transportarla,
+                                    la
+                                    convertirá en tu PC favorita.<br><br>
+                                </p>
+                            </div>
+
                         </div>
                         <div class="align-items-center align-content-center col-md-3 border-left mt-1">
                             <div class="d-flex flex-row align-items-center">
@@ -156,14 +170,20 @@
                                         class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i>
                                 </div><span>197</span>
                             </div>
-                            <div class="mt-1 mb-1 spec-1"><span>100% cotton</span><span class="dot"></span><span>Light
-                                    weight</span><span class="dot"></span><span>Best finish<br></span></div>
-                            <div class="mt-1 mb-1 spec-1"><span>Unique design</span><span class="dot"></span><span>For
-                                    men</span><span class="dot"></span><span>Casual<br></span></div>
-                            <p class="text-justify text-truncate">There are many variations of passages of
-                                Lorem Ipsum available, but the majority have suffered alteration in some form, by
-                                injected humour, or randomised words which don't look even slightly believable.<br><br>
-                            </p>
+                            <div class="descripcion">
+                                <div class="mt-1 mb-1 spec-1"><span>Es antirreflejo</span><span
+                                        class="dot"></span><span>Es
+                                        táctil</span><span class="dot"></span><span>Pad numérico<br></span></div>
+
+                            </div>
+                            <div class="productoTexto">
+                                <p class="text-justify  textoDesc">La notebook Lenovo IdeaPad 3 fue pensada para hacer
+                                    tu
+                                    vida más sencilla. Su diseño elegante e innovador y su comodidad para transportarla,
+                                    la
+                                    convertirá en tu PC favorita.<br><br>
+                                </p>
+                            </div>
                         </div>
                         <div class="align-items-center align-content-center col-md-3 border-left mt-1">
                             <div class="d-flex flex-row align-items-center">
@@ -185,14 +205,20 @@
                                         class="fa fa-star"></i><i class="fa fa-star"></i><i
                                         class="fa-solid fa-star-half-stroke"></i></div><span>123</span>
                             </div>
-                            <div class="mt-1 mb-1 spec-1"><span>100% cotton</span><span class="dot"></span><span>Light
-                                    weight</span><span class="dot"></span><span>Best finish<br></span></div>
-                            <div class="mt-1 mb-1 spec-1"><span>Unique design</span><span class="dot"></span><span>For
-                                    men</span><span class="dot"></span><span>Casual<br></span></div>
-                            <p class="text-justify text-truncate para mb-0">There are many variations of passages of
-                                Lorem Ipsum available, but the majority have suffered alteration in some form, by
-                                injected humour, or randomised words which don't look even slightly believable.<br><br>
-                            </p>
+                            <div class="descripcion">
+                                <div class="mt-1 mb-1 spec-1"><span>Es antirreflejo</span><span
+                                        class="dot"></span><span>Es
+                                        táctil</span><span class="dot"></span><span>Pad numérico<br></span></div>
+
+                            </div>
+                            <div class="productoTexto">
+                                <p class="text-justify  textoDesc">La notebook Lenovo IdeaPad 3 fue pensada para hacer
+                                    tu
+                                    vida más sencilla. Su diseño elegante e innovador y su comodidad para transportarla,
+                                    la
+                                    convertirá en tu PC favorita.<br><br>
+                                </p>
+                            </div>
                         </div>
                         <div class="align-items-center align-content-center col-md-3 border-left mt-1">
                             <div class="d-flex flex-row align-items-center">
@@ -200,7 +226,8 @@
                             </div>
                             <h6 class="text-success">Envío gratis</h6>
                             <div class="d-flex flex-column mt-4"><button class="btn btn-danger btn-sm"
-                                    type="button">Detalles</button><button class="btn btn-outline-primary btn-sm mt-2"
+                                    type="button">Detalles</button>
+                                    <button class="btn btn-outline-primary btn-sm mt-2"
                                     type="button">Agregar al carrito</button></div>
                         </div>
                     </div>
@@ -213,14 +240,20 @@
                                 <div class="ratings me-2"><i class="fa fa-star"></i><i class="fa fa-star"></i><i
                                         class="fa fa-star"></i><i class="fa fa-star"></i></div><span>110</span>
                             </div>
-                            <div class="mt-1 mb-1 spec-1"><span>100% cotton</span><span class="dot"></span><span>Light
-                                    weight</span><span class="dot"></span><span>Best finish<br></span></div>
-                            <div class="mt-1 mb-1 spec-1"><span>Unique design</span><span class="dot"></span><span>For
-                                    men</span><span class="dot"></span><span>Casual<br></span></div>
-                            <p class="text-justify text-truncate para mb-0">There are many variations of passages of
-                                Lorem Ipsum available, but the majority have suffered alteration in some form, by
-                                injected humour, or randomised words which don't look even slightly believable.<br><br>
-                            </p>
+                            <div class="descripcion">
+                                <div class="mt-1 mb-1 spec-1"><span>Es antirreflejo</span><span
+                                        class="dot"></span><span>Es
+                                        táctil</span><span class="dot"></span><span>Pad numérico<br></span></div>
+
+                            </div>
+                            <div class="productoTexto">
+                                <p class="text-justify  textoDesc">La notebook Lenovo IdeaPad 3 fue pensada para hacer
+                                    tu
+                                    vida más sencilla. Su diseño elegante e innovador y su comodidad para transportarla,
+                                    la
+                                    convertirá en tu PC favorita.<br><br>
+                                </p>
+                            </div>
                         </div>
                         <div class="align-items-center align-content-center col-md-3 border-left mt-1">
                             <div class="d-flex flex-row align-items-center">
@@ -237,6 +270,24 @@
         </div>
         <!-- Recomendaciones -->
     </main>
+
+    <!-- ========== Start Section ========== -->
+
+    <div class="container mt-3 mb-3 text-center separador w-auto">
+        <h2 class="">¡Nuestros productos!</h2>
+    </div>
+    <!-- ========== End Section ========== -->
+
+    <!-- ========== Start productos ========== -->
+
+    <div class="container mt-3 mb-3 text-center d-flex w-auto flex-nowrap" id="shop">
+
+
+
+    </div>
+
+    <!-- ========== End productos ========== -->
+
 
 
 
@@ -289,13 +340,7 @@
                     <!-- Grid column -->
                     <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mt-3">
                         <h6 class="text-uppercase mb-4 font-weight-bold">Contact</h6>
-                        <section>
-                            <form id="formulario">
-                                <input type="text" id="names" class="mt-3"><br>
-                                <input type="number" id="edad"  class="mt-3"><br>
-                                <input type="submit"  class="mt-3" value="Enviar">
-                            </form>
-                        </section>
+
                         <p><i class="fas fa-home mr-3"></i> Capital Federal, R</p>
                         <p><i class="fas fa-envelope mr-3"></i> Electronix@gmail.com</p>
                         <p><i class="fas fa-phone mr-3"></i> + 01 234 567 88</p>

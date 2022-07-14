@@ -25,6 +25,94 @@ Footer {
   background-color: #EB4B33;
 }
 
+.card {
+  position: relative;
+  display: flex;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  word-wrap: break-word;
+  background-color: #fff;
+  background-clip: border-box;
+  border: 1px solid rgba(0, 0, 0, 0.125);
+  border-radius: 0.1875rem;
+}
+
+.card-img-actions {
+  position: relative;
+}
+
+.card-body {
+  flex: 1 1 auto;
+  padding: 1.25rem;
+  text-align: center;
+}
+
+.card-img {
+  width: 350px;
+}
+
+.star {
+  color: red;
+}
+
+.bg-cart {
+  background-color: orange;
+  color: #fff;
+}
+
+.bg-cart:hover {
+  color: #fff;
+}
+
+.bg-buy {
+  background-color: green;
+  color: #fff;
+  padding-right: 29px;
+}
+
+.bg-buy:hover {
+  color: #fff;
+}
+
+a {
+  text-decoration: none !important;
+}
+
+.cartAmount {
+  position: absolute;
+  font-size: 11px;
+  background-color: red;
+  color: white;
+  padding: 3px;
+  border-radius: 5px;
+  top: 17px;
+  left: 423px;
+}
+
+.separador {
+  font-family: "Slabo 27px", serif;
+  font-size: 2.5rem;
+  transition: 0.3s ease-in-out;
+  -webkit-transition: 0.3s ease-in-out;
+  -moz-transition: 0.3s ease-in-out;
+  -ms-transition: 0.3s ease-in-out;
+  -o-transition: 0.3s ease-in-out;
+}
+
+.separador:hover {
+  transform: scale(1.2);
+  -webkit-transform: scale(1.2);
+  -moz-transform: scale(1.2);
+  -ms-transform: scale(1.2);
+  -o-transform: scale(1.2);
+  transition: 0.3s ease-in-out;
+  -webkit-transition: 0.3s ease-in-out;
+  -moz-transition: 0.3s ease-in-out;
+  -ms-transition: 0.3s ease-in-out;
+  -o-transition: 0.3s ease-in-out;
+}
+
 .ofertasEffect {
   background-image: linear-gradient(to right, white, white 50%, #000 50%);
   background-size: 200% 100%;
@@ -91,6 +179,11 @@ Footer {
   color: red;
 }
 
+.ratings2 i {
+  font-size: 16px;
+  color: #0dcaf0;
+}
+
 .strike-text {
   color: red;
   text-decoration: line-through;
@@ -98,6 +191,11 @@ Footer {
 
 .product-image {
   width: 100%;
+}
+
+.producto {
+  font-family: sans-serif;
+  width: 18rem;
 }
 
 /***** Slider Css *****/
@@ -183,27 +281,22 @@ h5 {
     -ms-transition: 0.5s;
     -o-transition: 0.5s;
   }
-
   .navLogo {
     display: none;
   }
-
   .navbar-brand {
     margin: 0;
   }
-
   .usuario {
     width: -webkit-fit-content;
     width: -moz-fit-content;
     width: fit-content;
   }
-
   .bi-person-circle,
 .bi-cart-fill {
     margin-top: -2px;
     margin-left: 0 !important;
   }
-
   .strike-text {
     margin-bottom: 9px;
   }
