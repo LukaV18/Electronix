@@ -1,8 +1,9 @@
 let shopOfertas = document.getElementById('shopOfertas')
 
-console.log(shopOfertas)
 
 
+
+//Utilizacion de operador logico OR para optimizar la linea de codigo
 
 let CARRITO = JSON.parse(localStorage.getItem("data")) || [];
 
@@ -48,7 +49,7 @@ generateShopOfertas()
 
 let shop = document.getElementById('shop')
 
-console.log(shop)
+
 
 let generateShop = () => {
     return (shop.innerHTML = shopItemsData.map((producto) => {
@@ -91,9 +92,11 @@ let comprar = (id) => {
     }
 
 
-    localStorage.setItem("data", JSON.stringify(CARRITO))
+    
     calculador()
-    console.log(CARRITO)
+
+    localStorage.setItem("data", JSON.stringify(CARRITO))
+
 }
 
 
@@ -106,9 +109,11 @@ let remover = (id) => {
     else {
         search.item -= 1
     }
-    localStorage.setItem("data", JSON.stringify(CARRITO))
+    
     calculador()
-    console.log(CARRITO)
+    CARRITO = CARRITO.filter((x) => x.item !== 0)
+   
+    localStorage.setItem("data", JSON.stringify(CARRITO))
 }
 
 
@@ -120,6 +125,11 @@ let calculador = () => {
 
 }
 
+let update = (id) => {
+    let search = CARRITO.find((x) => x.id === id);
+    document.getElementById(id).innerHTML = search.item;
+    calculation();
+  };
 
 
 calculador()

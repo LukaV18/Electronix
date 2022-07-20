@@ -23,6 +23,142 @@ Footer {
     background-color: #212529 !important;
 }
 
+.textoCarrito h2 {
+    font-family: 'Staatliches', cursive;
+    font-size: 3rem;
+}
+
+.textoCarrito {
+    height: 70vh;
+}
+
+// style para carrito
+
+.shopping-cart {
+    display: grid;
+    grid-template-columns: repeat(1, 320px);
+    justify-content: center;
+    gap: 15px;
+
+}
+
+.cart-item {
+    display: flex;
+    background-color: white;
+    border: 2px solid black;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+    height: 7rem;
+    width: 25rem;
+
+    img {
+        border-radius: 5px;
+        -webkit-border-radius: 5px;
+        -moz-border-radius: 5px;
+        -ms-border-radius: 5px;
+        -o-border-radius: 5px;
+    }
+
+    p {
+        margin: 0;
+    }
+
+    .card-buttons {
+        display: flex;
+        gap: 10px;
+    }
+
+
+
+    .title-price-x {
+        display: flex;
+        width: 290px;
+        justify-content: space-between;
+        align-items: center;
+
+
+
+        p {
+            font-size: 1rem;
+
+        }
+
+        .title-price {
+            display: flex;
+            /* align-items: center; */
+            gap: 0px;
+            margin-top: 10px;
+        }
+
+        h4 {
+            .title-name {
+                max-width: 215px;
+                min-width: 215px;
+
+            }
+
+
+            .title-item-price {
+                padding: 3px 6px;
+                height: fit-content;
+                background-color: #000;
+                color: white;
+                border-radius: 4px;
+                -webkit-border-radius: 4px;
+                -moz-border-radius: 4px;
+                -ms-border-radius: 4px;
+                -o-border-radius: 4px;
+            }
+        }
+
+    }
+}
+
+.bi-dash-lg {
+    color: red;
+    cursor: pointer;
+    transition: 1s;
+    -webkit-transition: 1s;
+    -moz-transition: 1s;
+    -ms-transition: 1s;
+    -o-transition: 1s;
+}
+
+.bi-plus-lg {
+    color: green;
+    cursor: pointer;
+    transition: 1s;
+    -webkit-transition: 1s;
+    -moz-transition: 1s;
+    -ms-transition: 1s;
+    -o-transition: 1s;
+}
+
+.bi-dash-lg:hover {
+    transform: scale(1.2);
+    -webkit-transform: scale(1.2);
+    -moz-transform: scale(1.2);
+    -ms-transform: scale(1.2);
+    -o-transform: scale(1.2);
+}
+
+.bi-plus-lg:hover {
+    transform: scale(1.2);
+    -webkit-transform: scale(1.2);
+    -moz-transform: scale(1.2);
+    -ms-transform: scale(1.2);
+    -o-transform: scale(1.2);
+}
+
+//
+.bi-x-lg {
+    color: red;
+    font-weight: bold;
+}
+
 .footerCopyr {
     background-color: #EB4B33;
 
@@ -66,6 +202,7 @@ Footer {
     background-color: orange;
     color: #fff;
 }
+
 
 .bg-cart:hover {
 
