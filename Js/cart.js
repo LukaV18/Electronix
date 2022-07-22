@@ -8,7 +8,8 @@ let update = (id) => {
     let search3 = CARRITO.find((x) => x.id === id);
     // document.getElementById(id).innerHTML = search3.item;
     calculador();
-  };
+    TotalAmount();
+};
 
 let calculador = () => {
     let cartIcon = document.getElementById("cartAmount");
@@ -36,7 +37,7 @@ let generateCarItems = () => {
                         <p class="title-name">${search.name || search2.name}</p>
                         <p class="title-item-price">$${search.precio|| search2.precio}</p>
                     </h4>
-                    <i class="bi bi-x-lg"></i>
+                    <i onclick="removerItem(${id})" class="bi bi-x-lg"></i>
                 </div>
                     
 
@@ -46,7 +47,7 @@ let generateCarItems = () => {
                     <i onclick="comprar(${id})" class="bi bi-plus-lg"></i>
                 </div>
 
-                <h3></h3>
+                <h3 class="card-price-2">$ ${item * (search.precio || search2.precio) }</h3>
             </div>
         </div>`;
         }).join(""))
@@ -84,7 +85,7 @@ let comprar = (id) => {
 
     localStorage.setItem("data", JSON.stringify(CARRITO))
     generateCarItems()
-   
+
 }
 
 
@@ -97,13 +98,62 @@ let remover = (id) => {
     else {
         search.item -= 1
     }
-    
+
     update(selectedItem.id)
     calculador()
     CARRITO = CARRITO.filter((x) => x.item !== 0)
     generateCarItems()
     localStorage.setItem("data", JSON.stringify(CARRITO))
 
- 
+
 }
+
+let removerItem = (id) => {
+    let selectedItem = id;
+    CARRITO = CARRITO.filter((x) => x.id !== selectedItem);
+    localStorage.setItem("data", JSON.stringify(CARRITO))
+    
+    TotalAmount();
+    generateCarItems()
+    calculador()
+
+}
+
+let TotalAmount = () => {
+    if (CARRITO.leng !== 0) {
+        let amount = CARRITO.map((x) => {
+            let {
+                item,
+                id
+            } = x;
+            let search = shopItemsData.find((y) => y.id === id) || [];
+            let search2 = shopItemsDataOfertas.find((z) => z.id === id) || [];
+            return item * (search.precio || search2.precio)
+        }).reduce((x,y) => x+y, 0)
+        label.innerHTML = `
+        <h2>Precio Total : $${amount}</h2>
+        <button class="btn btn-success pagar">Pagar Carrito</button>
+        <button class="btn btn-danger remover" onclick="clearCart()">Limpiar Carrito</button>
+        `
+       
+    } else return
+}
+
+let clearCart = () => {
+    
+    CARRITO = []
+    generateCarItems()
+    localStorage.setItem("data", JSON.stringify(CARRITO))
+    Swal.fire({
+        position: 'top-end',
+        icon: 'success',
+        title: 'Se ha vaciado el carrito',
+        showConfirmButton: false,
+        timer: 1500
+      })
+      
+    
+}
+
+TotalAmount();
 

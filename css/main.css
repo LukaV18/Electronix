@@ -26,15 +26,22 @@ Footer {
   font-size: 3rem;
 }
 
-.textoCarrito {
-  height: 70vh;
-}
-
 .shopping-cart {
   display: grid;
-  grid-template-columns: repeat(1, 320px);
+  grid-template: "header" "nav" "label" "shopping" "footer"/auto;
   justify-content: center;
   gap: 15px;
+  min-height: 50vh;
+  margin-bottom: 20px;
+  grid-area: shopping;
+}
+
+.navbar {
+  grid-area: nav;
+}
+
+#label {
+  grid-area: label;
 }
 
 .cart-item {
@@ -59,6 +66,9 @@ Footer {
 .cart-item p {
   margin: 0;
 }
+.cart-item .card-price-2 {
+  font-size: 1.2rem;
+}
 .cart-item .card-buttons {
   display: flex;
   gap: 10px;
@@ -68,6 +78,7 @@ Footer {
   width: 290px;
   justify-content: space-between;
   align-items: center;
+  cursor: pointer;
 }
 .cart-item .title-price-x p {
   font-size: 1rem;
@@ -139,6 +150,12 @@ Footer {
 
 .footerCopyr {
   background-color: #EB4B33;
+}
+
+.footerCarrito {
+  grid-area: footer;
+  bottom: 0;
+  width: 100%;
 }
 
 .card {

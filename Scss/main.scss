@@ -21,6 +21,7 @@ body {
 
 Footer {
     background-color: #212529 !important;
+    
 }
 
 .textoCarrito h2 {
@@ -29,17 +30,32 @@ Footer {
 }
 
 .textoCarrito {
-    height: 70vh;
+   
 }
 
 // style para carrito
 
 .shopping-cart {
     display: grid;
-    grid-template-columns: repeat(1, 320px);
+   
+    grid-template: "header"
+     "nav"
+    "label"
+    "shopping"
+    "footer" / auto;
     justify-content: center;
     gap: 15px;
+    min-height: 50vh;
+    margin-bottom: 20px;
+    grid-area: shopping;
+}
 
+.navbar {
+    grid-area: nav;
+}
+
+#label {
+    grid-area: label;
 }
 
 .cart-item {
@@ -66,6 +82,10 @@ Footer {
         margin: 0;
     }
 
+    .card-price-2 {
+        font-size: 1.2rem;
+    }
+
     .card-buttons {
         display: flex;
         gap: 10px;
@@ -78,7 +98,7 @@ Footer {
         width: 290px;
         justify-content: space-between;
         align-items: center;
-
+        cursor: pointer;
 
 
         p {
@@ -116,6 +136,9 @@ Footer {
 
     }
 }
+
+
+
 
 .bi-dash-lg {
     color: red;
@@ -163,6 +186,17 @@ Footer {
     background-color: #EB4B33;
 
 }
+
+.footerCarrito {
+   
+  
+
+    grid-area: footer;
+   
+    bottom: 0;
+    width: 100%;
+}
+
 
 // card //
 .card {
